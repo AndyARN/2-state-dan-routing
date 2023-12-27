@@ -1,9 +1,10 @@
-export default function Navbar() {
+/* eslint-disable react/prop-types */
+export default function Navbar({title, children}) {
     return (
         <nav className="container flex justify-between h-20 items-center">
             {/* logo */}
             <a href="#" className="text-xl font-bold">
-                Logo
+                {title}
             </a>
 
             {/* link menus */}
@@ -17,6 +18,9 @@ export default function Navbar() {
                     <a href="#">Contact</a>
                 </li>
             </ul>
+
+            {/* element children */}
+            {children}
         </nav>
     )
 }
